@@ -134,3 +134,19 @@ form label, form legend {
     background: darkorange; 
     transform: scale(1.2); /*transform: rotate(70deg) gira o botão em graus */
 }
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: #555555;
+    color: #ffff;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+
+}
