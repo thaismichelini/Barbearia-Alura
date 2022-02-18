@@ -36,6 +36,105 @@ nav a:hover { /* muda comportamento quando o mouse esta em cima */
     color: #c78c19;
     text-decoration: underline;
 }
+
+/* -----Página Inicial----- */
+.banner {
+    width: 100%;
+}
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 1em; /* margin p/ baixar proporcional ao tamanho da fonte */
+    clear: left; /* limpa o float */
+}
+
+.principal {
+    padding: 3em 0;
+    width: 940px;
+    margin: 0 auto;
+    background: #fefefe;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left; /* float afeta todos os elementos abaixo da página */
+    margin: 0 20px 20px 0;
+}
+.mapa {
+    padding: 3em 0;  
+    background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+    /* box-shadow: inset 0 0 30px #ff000f; ---exemplo sombra  inset = interna*/
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+
+}
+
+.itens:before {
+   content: "✭";
+}
+
+.itens:first-child { /*pode ser usado last=child, nth-child(4) p/ marcar o quarto elemento nth-child(2n) num pares */
+    font-weight: bold;
+
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1;
+    transition: 400ms;   
+    box-shadow: 10px 10px 10px 0  #000000;
+}     
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
+}
+.video {
+    width: 560px;
+    margin: 2em auto; /*centraliza*/
+}
+
+/****** Produtos ******/
 .produtos {
     width: 940px;
     margin: 0 auto;
@@ -82,22 +181,14 @@ nav a:hover { /* muda comportamento quando o mouse esta em cima */
     margin-top: 10px
 }
 
-footer {
-    text-align: center;
-    background: url("bg.jpg");
-    padding: 40px 0;
-}
+/***** Contatos ******/
 
-.copyright {
-    color: white;
-    font-size: 13px;
-    margin: 20px 0 0;
-}
-
-main {
+.contato {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
     
 }
-
 form {
     margin: 40px 0;
 }
@@ -153,101 +244,42 @@ td, th {
     padding: 8px 15px;
 }
 
-/* -----Página Inicial----- */
-.banner {
-    width: 100%;
-}
-.titulo-principal {
+
+
+/* ***** Footer ***** */
+
+footer {
     text-align: center;
-    font-size: 2em;
-    margin: 0 0 1em; /* margin p/ baixar proporcional ao tamanho da fonte */
-    clear: left; /* limpa o float */
+    background: url("bg.jpg");
+    padding: 40px 0;
 }
 
-/* .titulo-principal:first-letter { ---- primeira letra
-    font-weight: bold;
-} */
-
-/* p:first-line {               ---- primeira linha
-    font-style: italic;
-
-} */
-.principal {
-    padding: 3em 0;
-    width: 940px;
-    margin: 0 auto;
-    background: #fefefe;
+.copyright {
+    color: white;
+    font-size: 13px;
+    margin: 20px 0 0;
 }
 
-.principal p {
-    margin: 0 0 1em;
+
+/****** Design Responsivo *******/
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+
+    }
 }
 
-.principal strong {
-    font-weight: bold;
-}
 
-.principal em {
-    font-style: italic;
-}
 
-.utensilios {
-    width: 120px;
-    float: left; /* float afeta todos os elementos abaixo da página */
-    margin: 0 20px 20px 0;
-}
-.mapa {
-    padding: 3em 0;  
-    background: linear-gradient(#fefefe, #888888);
-}
-
-.mapa-conteudo {
-    width: 940px;
-    margin: 0 auto;
-}
-
-.mapa p {
-    margin: 0 0 2em;
-    text-align: center;
-}
-
-.beneficios {
-    padding: 3em 0;
-    background: #888888;
-}
-
-.conteudo-beneficios {
-    width: 640px;
-    margin: 0 auto;
-}
-
-.lista-beneficios {
-    width: 40%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.itens {
-    line-height: 1.5;
-
-}
-
-.itens:before {
-   content: "✭";
-}
-
-.itens:first-child { /*pode ser usado last=child, nth-child(4) p/ marcar o quarto elemento nth-child(2n) num pares */
-    font-weight: bold;
-
-}
-
-.imagem-beneficios {
-    width: 60%;
-}
-
-.video {
-    width: 560px;
-    margin: 2em auto; /*centraliza*/
-}
 
 
